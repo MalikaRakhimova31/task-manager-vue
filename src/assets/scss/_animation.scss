@@ -1,0 +1,39 @@
+.form-input-anim {
+    position: relative;
+    // overflow: hidden;
+    
+    label {
+      color: #888A8F;
+      position: absolute;
+      left: 30px;
+      width: 100%;
+      top: -10px;
+      height: 100%;
+      pointer-events: none;
+    }
+    .content-name {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      padding-bottom: 5px;
+      transition: all 0.3s ease;
+    }
+    input:focus + .label-name .content-name,
+    input:valid + .label-name .content-name {
+      transform: translateY(-105%);
+      font-size: 12px;
+      left: -10px;
+      background-color: #fff;
+      padding: 5px 5px;
+    }
+
+    input {
+      height: 56px;
+    }
+    
+    input:focus + .label-name::after,
+    .form input:valid + .label-name::after {
+      transform: translateX(0%);
+    }
+  }
+  
